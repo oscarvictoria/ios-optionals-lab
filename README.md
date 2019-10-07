@@ -9,12 +9,18 @@ a. Given the variable `userNameOne` below, print *"The username is Test User"*. 
 
 ```swift
 var userNameOne: String? = "Test User"
+if let validUserName = userName {
+print("The username is \(validUsername)")
+}
 ```
 
 b. Given the variable `userNameTwo` below, print *"The username is undefined"*.  Use the *nil coalescing operator* (`??`).
 
 ```swift
 var userNameTwo: String? = nil
+var userNameTwo: String?
+let validUserNameTwo = userNameTwo ?? "Undefined"
+print("the username is \(validUserNameTwo)")
 ```
 
 ## Question 2
@@ -42,6 +48,9 @@ a. Given the variables `userOneName`, `userOneAge`, and `userOneHeight` below, w
 var userOneName: String? = "Anne"
 var userOneAge: Int? = 15
 var userOneHeight: Double? = 70
+
+if let bindedName = userOneName, let bindedAge = userOneAge,let bindedHeight = userOneHeight {
+print("Hello \(bindedName)!, You are \(bindedAge) years old and \(bindedHeight / 12) feet tall")
 ```
 
 b. Given the variables `userTwoName`, `userTwoAge` and `userTwoHeight` below, write code that prints "Hello user!  You are 15 years old and I don't know how tall you are".  Use optional binding
@@ -61,6 +70,7 @@ Give the variable `favoriteNumber`, write code that either prints "Your favorite
 
 ```swift
 var favoriteNumber = Bool.random() ? Int.random(in: 0...10) : nil
+print(favoriteNumber ?? "I dont know what your favorite number is")
 ```
 
 
