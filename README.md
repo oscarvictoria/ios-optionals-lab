@@ -9,8 +9,10 @@ a. Given the variable `userNameOne` below, print *"The username is Test User"*. 
 
 ```swift
 var userNameOne: String? = "Test User"
-if let validUserName = userName {
+if let userNameOne = userNameOne {
 print("The username is \(validUsername)")
+} else {
+print("no username")
 }
 ```
 
@@ -18,11 +20,13 @@ b. Given the variable `userNameTwo` below, print *"The username is undefined"*. 
 
 ```swift
 var userNameTwo: String? = nil
-var userNameTwo: String?
+
+```
+```
 let validUserNameTwo = userNameTwo ?? "Undefined"
 print("the username is \(validUserNameTwo)")
-```
 
+```
 ## Question 2
 
 a. Given the variables `rectOneWidth` and `rectOneHeight` below, print "The area of rectOne is 50".  Use *Optional Binding* (`if let`) to print the area.
@@ -31,12 +35,31 @@ a. Given the variables `rectOneWidth` and `rectOneHeight` below, print "The area
 var rectOneWidth: Double? = 5
 var rectOneHeight: Double? = 10
 ```
+```
+if let rectOneWidth = rectOneWidth,
+    let rectOneHeight = rectOneHeight {
+    print(" The area of rectOne is \(rectOneWidth * rectOneHeight)")
+} else {
+    print("no such value")
+}
+
+
+```
 
 b. Given the variables `rectTwoWidth` and `rectTwoHeight` below, print "The are of rectTwo is not able to be calculated".  Use *Optional Binding* (`if let`) to print this message.
 
 ```swift
 var rectTwoWidth: Double? = nil
 var rectTwoHeight: Double? = nil
+```
+```
+if let rectTwoWidth = rectTwoWidth,
+    let rectTwoHeight = rectTwoHeight {
+    print("the value of rectTwo is \(rectTwoWidth * rectTwoHeight )")
+} else {
+    print("The are of rectTwo is not able to be calculated")
+}
+
 ```
 
 ## Question 3
@@ -49,8 +72,16 @@ var userOneName: String? = "Anne"
 var userOneAge: Int? = 15
 var userOneHeight: Double? = 70
 
-if let bindedName = userOneName, let bindedAge = userOneAge,let bindedHeight = userOneHeight {
+```
+```
+if let bindedName = userOneName,
+    let bindedAge = userOneAge,
+    let bindedHeight = userOneHeight {
 print("Hello \(bindedName)!, You are \(bindedAge) years old and \(bindedHeight / 12) feet tall")
+} else {
+    print("no info is available")
+
+
 ```
 
 b. Given the variables `userTwoName`, `userTwoAge` and `userTwoHeight` below, write code that prints "Hello user!  You are 15 years old and I don't know how tall you are".  Use optional binding
@@ -59,6 +90,18 @@ b. Given the variables `userTwoName`, `userTwoAge` and `userTwoHeight` below, wr
 var userTwoName: String? = nil
 var userTwoAge: Int? = 15
 var userTwoHeight: Double? = nil
+```
+```
+if let userTwoName = userTwoName,
+let userTwoAge = userTwoAge,
+    let userTwoHeight = userTwoHeight {
+    print("Hello \(userTwoName), you are \(userTwoAge) years old and \(userTwoHeight) feet tall")
+} else {
+    print("Hello user you are \(userTwoAge ?? 0) years old and I dont know how tall you are")
+}
+
+
+
 ```
 
 
@@ -83,6 +126,17 @@ Given the variables `numOne`, `numTwo` and `numThree`, write code that prints "T
 var numOne = Bool.random() ? Int.random(in: 0...10) : nil
 var numTwo = Bool.random() ? Int.random(in: 0...10) : nil
 var numThree = Bool.random() ? Int.random(in: 0...10) : nil
+```
+```
+if let numOne = numOne,
+let numTwo = numTwo,
+    let numThree = numThree {
+    print("the sum of all the numbers is \(numOne + numTwo + numThree)")
+} else {
+    print("the sum is zero")
+}
+
+
 ```
 
 ## Question 6
